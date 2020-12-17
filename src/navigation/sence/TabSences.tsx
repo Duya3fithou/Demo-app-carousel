@@ -10,10 +10,7 @@ import Images from 'assets/images';
 
 // Screen
 import HomeScreen from 'feature/home/HomeScreen';
-import HomeDetailScreen from 'feature/home/HomeDetailScreen';
-import HomeDataScreen from 'feature/home/HomeDataScreen';
 import SettingView from 'feature/setting/SettingScreen';
-import HomeUserListScreen from 'feature/home/HomeUserListScreen';
 import NotificationScreen from 'feature/notification/NotificationScreen';
 import { View } from 'react-native';
 
@@ -23,10 +20,6 @@ const MainTab = createBottomTabNavigator();
 const HomeStack = () => (
     <MainStack.Navigator headerMode={'none'} screenOptions={navigationConfigs} keyboardHandlingEnabled={isIos}>
         <MainStack.Screen name={TAB_NAVIGATION_ROOT.HOME_ROUTE.HOME} component={HomeScreen} />
-        <MainStack.Screen name={TAB_NAVIGATION_ROOT.HOME_ROUTE.HOME_DETAIL} component={HomeDetailScreen} />
-        <MainStack.Screen name={TAB_NAVIGATION_ROOT.HOME_ROUTE.WEB_VIEW} component={HomeDetailScreen} />
-        <MainStack.Screen name={TAB_NAVIGATION_ROOT.HOME_ROUTE.HOME_DATA} component={HomeDataScreen} />
-        <MainStack.Screen name={TAB_NAVIGATION_ROOT.HOME_ROUTE.HOME_USER_LIST} component={HomeUserListScreen} />
     </MainStack.Navigator>
 );
 
@@ -41,7 +34,7 @@ const MainTabContainer = () => {
         },
         {
             name: TAB_NAVIGATION_ROOT.NOTIFICATION_ROUTE.ROOT,
-            title: t('tab.notification'),
+            title: 'Favorite',
             component: NotificationScreen,
             icon: Images.icons.tab.notification,
         },

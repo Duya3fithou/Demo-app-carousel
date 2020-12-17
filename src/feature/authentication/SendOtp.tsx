@@ -7,7 +7,6 @@ import { Themes } from 'assets/themes';
 import AlertMessage from 'components/base/AlertMessage';
 import { checkVerifyCode, forgotPassword, getVerifyCode, register } from 'api/modules/api-app/authenticate';
 import { useTranslation } from 'react-i18next';
-import { setUserInfo } from 'app-redux/userInfo/actions';
 import AuthenticateService from 'utilities/authenticate/AuthenticateService';
 import { navigate } from 'navigation/NavigationService';
 import { AUTHENTICATE_ROUTE } from 'navigation/config/routes';

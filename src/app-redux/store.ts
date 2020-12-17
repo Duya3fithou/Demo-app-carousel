@@ -9,7 +9,7 @@ import rootReducer from 'app-redux/rootReducer';
 
 // persistInit
 const persistConfig = {
-    blacklist: ['AlertReducer'],
+    blacklist: ['AlertReducer', 'Favorite'],
     key: 'amela@2019',
     debug: __DEV__,
     storage: AsyncStorage,

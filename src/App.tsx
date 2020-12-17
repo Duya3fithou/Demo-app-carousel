@@ -20,7 +20,7 @@ import Navigation from 'navigation/sence/RootSences';
 import { RootSiblingParent } from 'react-native-root-siblings';
 import APIProvider from 'utilities/context/APIProvider';
 
-LogBox.ignoreLogs(['Require cycle:']);
+LogBox.ignoreAllLogs();
 
 const App: React.FunctionComponent = () => (
     <Provider store={store}>
