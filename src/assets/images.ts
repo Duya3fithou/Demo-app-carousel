@@ -13,6 +13,13 @@ const Images = {
             check: require('./icon/ic_check_radio.png'),
             uncheck: require('./icon/ic_uncheck_radio.png'),
         },
+        subTab: {
+            calendar: require('./icon/calendar.png'),
+            lock: require('./icon/lock.png'),
+            map_marker: require('./icon/map_marker.png'),
+            phone: require('./icon/phone.png'),
+            user: require('./icon/user.png'),
+        },
     },
     photo: {},
 };

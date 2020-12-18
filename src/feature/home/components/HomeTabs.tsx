@@ -8,18 +8,18 @@ import { ITEM_HEIGHT, ITEM_WIDTH } from '../data/staticData';
 
 const initialLayout = { width: Dimensions.get('window').width };
 
-const SIZE_ICON = 22;
+const SIZE_ICON = 26;
 
 const ItemCard: React.FunctionComponent = ({ data }: any) => {
     const { user } = data;
 
     const [index, setIndex] = React.useState(0);
     const [routes] = React.useState([
-        { key: 'Home', title: '', icon: Images.icons.tab.home },
-        { key: 'Email', title: '', icon: Images.icons.tab.notification },
-        { key: 'Phone', title: '', icon: Images.icons.tab.setting },
-        { key: 'Account', title: '', icon: Images.icons.tab.setting },
-        { key: 'Settings', title: '', icon: Images.icons.tab.setting },
+        { key: 'Home', title: '', icon: Images.icons.subTab.map_marker },
+        { key: 'Email', title: '', icon: Images.icons.subTab.calendar },
+        { key: 'Phone', title: '', icon: Images.icons.subTab.phone },
+        { key: 'Account', title: '', icon: Images.icons.subTab.lock },
+        { key: 'Settings', title: '', icon: Images.icons.subTab.user },
     ]);
 
     const renderScene = SceneMap({
