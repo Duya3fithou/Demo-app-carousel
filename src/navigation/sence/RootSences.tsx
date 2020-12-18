@@ -1,11 +1,8 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Host } from 'react-native-portalize';
-import { useSelector } from 'react-redux';
-import { RootState } from 'app-redux/rootReducer';
 import { APP_ROUTE } from '../config/routes';
 import navigationConfigs from '../config/options';
-import AuthStack from './AuthSences';
 import MainTabContainer from './TabSences';
 
 const MainStack = createStackNavigator();
