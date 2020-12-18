@@ -1,15 +1,11 @@
 import * as React from 'react';
 import { FlatList, Image, Text, View } from 'react-native';
-import StyledText from 'components/base/StyledText';
 import { useSelector } from 'react-redux';
 import { RootState } from 'app-redux/rootReducer';
 import { ScaledSheet } from 'react-native-size-matters';
 
 const NotificationScreen: React.FunctionComponent = () => {
     const favorite = useSelector((state: RootState) => state.favorite);
-    React.useEffect(() => {
-        console.log('favorite :', favorite);
-    }, [favorite]);
     const ItemUserLiked = ({ data }: any) => {
         const { user } = data;
         return (
@@ -24,11 +20,13 @@ const NotificationScreen: React.FunctionComponent = () => {
     };
     return (
         <View style={styles.wrapperAll}>
+            <Text style={styles.title}>List favorite</Text>
             <FlatList
                 data={favorite}
-                renderItem={({ item }) => <ItemUserLiked data={item} extraData={favorite} />}
-                style={{ flex: 1 }}
+                renderItem={({ item }) => <ItemUserLiked data={item} />}
+                style={{ flex: 1, marginTop: 20 }}
                 keyExtractor={(index: number) => `${index}`}
+                extraData={favorite}
             />
         </View>
     );
@@ -58,6 +56,10 @@ const styles = ScaledSheet.create({
     },
     phoneNumber: {
         fontSize: 14,
+        fontWeight: 'bold',
+    },
+    title: {
+        fontSize: 25,
         fontWeight: 'bold',
     },
 });

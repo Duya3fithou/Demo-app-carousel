@@ -29,8 +29,9 @@ const HomeScreen: React.FunctionComponent = () => {
     };
     const handleYup = (card: any) => {
         getData();
-        favorite.push(card);
-        dispatch(updateFavorite(favorite));
+        const temp = [...favorite];
+        temp.push(card);
+        dispatch(updateFavorite(temp));
     };
     const handleNope = (card: any) => {
         getData();
